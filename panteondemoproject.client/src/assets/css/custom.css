@@ -1,0 +1,361 @@
+body {
+
+    font-family: "Arial", sans-serif;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(150deg, black, #f7780b);
+    color: #333;
+}
+
+.login-container {
+    width: 100%;
+    max-width: 400px;
+}
+
+    .login-container .card {
+        background-color: black;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .login-container .logo {
+        width: -webkit-fill-available;
+    }
+    .login-container h2 {
+        text-align: center;
+        color: #fff;
+        font-size:40px
+    }
+
+    .login-container form {
+        padding: 50px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .login-container input {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        padding: 10px;
+        margin-bottom: 12px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        transition: border-color 0.3s ease-in-out;
+        outline: none;
+        color: #333;
+    }
+
+        .login-container input:focus {
+            border-color: #ff8c00;
+        }
+
+    .login-container button {
+        background-color: #ff8c00;
+        color: #fff;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+        width: -webkit-fill-available;
+    }
+
+        .login-container button:hover {
+            background-color: #ff7f00;
+        }
+
+    .login-container .card .error-message {
+        text-align: center;
+        color: white;
+    }
+    .login-container .register-text, .login-container .login-text {
+        color: white;
+        cursor: pointer;
+        text-align: center;
+    }
+
+
+
+
+
+
+
+/* BuildingTable.css */
+/*.table-container {
+    margin: 20px auto;
+    max-width: 800px;
+    overflow-x: auto;*/ /* Tablonun geniþliðini aþmasý durumunda yatay kaydýrma */
+    /*background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.building-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+    .building-table th, .building-table td {
+        padding: 12px 15px;
+        border: 1px solid #000000;
+    }
+
+    .building-table thead {
+        background-color: #000000;
+        color: #ffffff;
+    }
+
+    .building-table tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .building-table tbody tr:nth-of-type(even) {
+        background-color: #ffffff;
+    }
+
+    .building-table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+.add-button {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+    .add-button:hover {
+        background-color: #333333;
+    }
+
+.form-container {
+    margin-top: 20px;
+}
+
+    .form-container input {
+        margin-right: 10px;
+        padding: 5px;
+        font-size: 16px;
+    }*/
+
+/* Responsive Design */
+/*@media (max-width: 600px) {
+    .building-table, .building-table thead, .building-table tbody, .building-table th, .building-table td, .building-table tr {
+        display: block;*/ /* Tablonun blok olarak görüntülenmesi */
+    /*}
+
+        .building-table th {
+            position: absolute;*/ /* Sütun baþlýklarýnýn gizlenmesi */
+            /*top: -9999px;
+            left: -9999px;
+        }
+
+        .building-table tr {
+            margin: 0 0 1rem 0;*/ /* Satýrlar arasýnda boþluk */
+            /*border: 1px solid #ccc;
+        }
+
+        .building-table td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+            white-space: nowrap;*/ /* Hücre içeriðinin kaydýrýlmasýný önlemek */
+        /*}
+
+            .building-table td:before {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                transform: translateY(-50%);
+            }
+
+            .building-table td:nth-of-type(1):before {
+                content: "Building Type";
+            }
+
+            .building-table td:nth-of-type(2):before {
+                content: "Building Cost";
+            }
+
+            .building-table td:nth-of-type(3):before {
+                content: "Construction Time";
+            }
+
+            .building-table td:nth-of-type(4):before {
+                content: "Actions";
+            }
+}*/
+
+
+
+
+/* BuildingsConfigurationPage.css */
+.table-container {
+    margin: 20px auto;
+    max-width: 800px;
+    overflow-x: auto;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.building-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 18px;
+}
+
+    .building-table th, .building-table td {
+        padding: 12px 15px;
+        border: 1px solid #000000;
+    }
+
+    .building-table thead {
+        background-color: #733805;
+        color: #ffffff;
+    }
+
+    .building-table tbody tr:nth-of-type(odd) {
+        background-color: #f9f9f9;
+    }
+
+    .building-table tbody tr:nth-of-type(even) {
+        background-color: #ffffff;
+    }
+
+    .building-table tbody tr:hover {
+        background-color: #f1f1f1;
+    }
+
+.add-button {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border: none;
+    background-color: #000000;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+    .add-button:hover {
+        background-color: #333333;
+    }
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+    .form-container input {
+        padding: 5px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    .form-container button {
+        background-color: #000;
+        color: #fff;
+        cursor: pointer;
+        border: none;
+        padding: 10px;
+    }
+
+        .form-container button:hover {
+            background-color: #333;
+        }
+
+.modal {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    width: 100%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+
+
+.modal-button .add-building-modal-button {
+    background-color: #ac5307;
+    border: none;
+    float: inline-end;
+    color:white;
+}
+.add-building-button {
+    width: -webkit-fill-available;
+    margin-top: 30px;
+    background: #ac5307;
+    color:white;
+}
+/* Responsive Design */
+@media (max-width: 600px) {
+    .building-table, .building-table thead, .building-table tbody, .building-table th, .building-table td, .building-table tr {
+        display: inline-block;
+        width: -webkit-fill-available;
+    }
+
+        .building-table th {
+            position: absolute;
+            top: -9999px;
+            left: -9999px;
+        }
+
+        .building-table tr {
+            margin: 0 0 1rem 0;
+            border: 1px solid #ccc;
+        }
+
+        .building-table td {
+            border: none;
+            border-bottom: 1px solid #eee;
+            position: relative;
+            padding-left: 50%;
+            white-space: nowrap;
+        }
+
+            .building-table td:before {
+                position: absolute;
+                top: 50%;
+                left: 10px;
+                width: 45%;
+                padding-right: 10px;
+                white-space: nowrap;
+                transform: translateY(-50%);
+            }
+
+            .building-table td:nth-of-type(1):before {
+                content: "Building Type";
+            }
+
+            .building-table td:nth-of-type(2):before {
+                content: "Building Cost";
+            }
+
+            .building-table td:nth-of-type(3):before {
+                content: "Construction Time";
+            }
+
+            .building-table td:nth-of-type(4):before {
+                content: "Actions";
+            }
+    .table-container .table-title {
+        display: none;
+    }
+}

@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35122.118
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PanteonDemoProject.Server", "PanteonDemoProject.Server\PanteonDemoProject.Server.csproj", "{92D308FC-5B27-450A-A7A3-1AF8FBB86241}"
+EndProject
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "panteondemoproject.client", "panteondemoproject.client\panteondemoproject.client.esproj", "{A3B88E7F-AF2C-4059-AD83-F519D02B5BDD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{92D308FC-5B27-450A-A7A3-1AF8FBB86241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{92D308FC-5B27-450A-A7A3-1AF8FBB86241}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{92D308FC-5B27-450A-A7A3-1AF8FBB86241}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{92D308FC-5B27-450A-A7A3-1AF8FBB86241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3B88E7F-AF2C-4059-AD83-F519D02B5BDD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3B88E7F-AF2C-4059-AD83-F519D02B5BDD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3B88E7F-AF2C-4059-AD83-F519D02B5BDD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{A3B88E7F-AF2C-4059-AD83-F519D02B5BDD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3B88E7F-AF2C-4059-AD83-F519D02B5BDD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3B88E7F-AF2C-4059-AD83-F519D02B5BDD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B209C80B-10FA-4765-AC98-C1F2564B22D5}
+	EndGlobalSection
+EndGlobal
