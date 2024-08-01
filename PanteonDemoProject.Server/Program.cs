@@ -9,12 +9,24 @@ using PanteonDemoProject.Server.Contexts;
 
 var builder = WebApplication.CreateBuilder(args);
 
-
 builder.Services.AddSingleton<MongoDBContext>();
 
 
-builder.Services.AddAuthorization();
 
+builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+            .AddJwtBearer(options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = "https://localhost:7059",
+                    ValidAudience = "https://localhost:7059",
+                    IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("dGhpcyBzdHJpbmcgd2l0aCBhIGJlIHN0b3AgZm9jdXNpb24gdGhpcyBzdHJpbmc"))
+                };
+            });
 
 builder.Services.AddCors(options =>
 {
@@ -29,8 +41,6 @@ builder.Services.AddCors(options =>
 
 builder.Services.AddControllers();
 
-builder.Services.Configure<MongoDBSettings>(builder.Configuration.GetSection("MongoDBSettings"));
-builder.Services.AddSingleton<ConfigurationService>();
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseMySql(builder.Configuration.GetConnectionString("DefaultConnection"),
                      new MySqlServerVersion(new Version(8, 0, 21))));
@@ -61,6 +71,8 @@ else
 }
 
 app.UseRouting();
+app.UseAuthentication();
+app.UseAuthorization();
 app.UseCors("AllowAllOrigins");
 app.UseHttpsRedirection();
 app.UseEndpoints(endpoints =>
@@ -68,8 +80,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers();
 });
 
-app.UseAuthentication();
-app.UseAuthorization();
+
 
 
 app.MapControllers();

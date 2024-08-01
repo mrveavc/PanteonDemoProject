@@ -17,17 +17,6 @@ namespace PanteonDemoProject.Server.Entity
 
         [BsonElement("construction_time"), BsonRepresentation(BsonType.Int32)]
         public int? ConstructionTime { get; set; }
-        //[BsonId]
-        //[BsonRepresentation(BsonType.ObjectId)]
-        //public int Id { get; set; }
-
-        //[Required]
-        //public string BuildingType { get; set; }
-
-        //[Required]
-        //public int BuildingCost { get; set; }
-
-        //[Required]
-        //public string ConstructionTime { get; set; }
+       
     }
 }

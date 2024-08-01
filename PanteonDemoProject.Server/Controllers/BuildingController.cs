@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using MongoDB.Bson;
 using MongoDB.Driver;
@@ -7,9 +8,9 @@ using PanteonDemoProject.Server.Entity;
 
 namespace PanteonDemoProject.Server.Controllers
 {
-
     [ApiController]
     [Route("api/[controller]")]
+    [Authorize]
     public class BuildingController : ControllerBase
     {
         private readonly IMongoCollection<Building> _buildings;

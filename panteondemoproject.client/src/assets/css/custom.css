@@ -81,129 +81,6 @@ body {
     }
 
 
-
-
-
-
-
-/* BuildingTable.css */
-/*.table-container {
-    margin: 20px auto;
-    max-width: 800px;
-    overflow-x: auto;*/ /* Tablonun geniþliðini aþmasý durumunda yatay kaydýrma */
-    /*background-color: #ffffff;
-    border: 1px solid #000000;
-    padding: 10px;
-    border-radius: 8px;
-}
-
-.building-table {
-    width: 100%;
-    border-collapse: collapse;
-    font-size: 18px;
-}
-
-    .building-table th, .building-table td {
-        padding: 12px 15px;
-        border: 1px solid #000000;
-    }
-
-    .building-table thead {
-        background-color: #000000;
-        color: #ffffff;
-    }
-
-    .building-table tbody tr:nth-of-type(odd) {
-        background-color: #f9f9f9;
-    }
-
-    .building-table tbody tr:nth-of-type(even) {
-        background-color: #ffffff;
-    }
-
-    .building-table tbody tr:hover {
-        background-color: #f1f1f1;
-    }
-
-.add-button {
-    margin-bottom: 10px;
-    padding: 8px 12px;
-    border: none;
-    background-color: #000000;
-    color: #ffffff;
-    cursor: pointer;
-}
-
-    .add-button:hover {
-        background-color: #333333;
-    }
-
-.form-container {
-    margin-top: 20px;
-}
-
-    .form-container input {
-        margin-right: 10px;
-        padding: 5px;
-        font-size: 16px;
-    }*/
-
-/* Responsive Design */
-/*@media (max-width: 600px) {
-    .building-table, .building-table thead, .building-table tbody, .building-table th, .building-table td, .building-table tr {
-        display: block;*/ /* Tablonun blok olarak görüntülenmesi */
-    /*}
-
-        .building-table th {
-            position: absolute;*/ /* Sütun baþlýklarýnýn gizlenmesi */
-            /*top: -9999px;
-            left: -9999px;
-        }
-
-        .building-table tr {
-            margin: 0 0 1rem 0;*/ /* Satýrlar arasýnda boþluk */
-            /*border: 1px solid #ccc;
-        }
-
-        .building-table td {
-            border: none;
-            border-bottom: 1px solid #eee;
-            position: relative;
-            padding-left: 50%;
-            white-space: nowrap;*/ /* Hücre içeriðinin kaydýrýlmasýný önlemek */
-        /*}
-
-            .building-table td:before {
-                position: absolute;
-                top: 50%;
-                left: 10px;
-                width: 45%;
-                padding-right: 10px;
-                white-space: nowrap;
-                transform: translateY(-50%);
-            }
-
-            .building-table td:nth-of-type(1):before {
-                content: "Building Type";
-            }
-
-            .building-table td:nth-of-type(2):before {
-                content: "Building Cost";
-            }
-
-            .building-table td:nth-of-type(3):before {
-                content: "Construction Time";
-            }
-
-            .building-table td:nth-of-type(4):before {
-                content: "Actions";
-            }
-}*/
-
-
-
-
-/* BuildingsConfigurationPage.css */
 .table-container {
     margin: 20px auto;
     max-width: 800px;
@@ -304,7 +181,11 @@ body {
     background: #ac5307;
     color:white;
 }
-/* Responsive Design */
+.logout-button {
+    float: inline-end;
+    background-color: #f7780b;
+    margin-bottom: 5px;
+}
 @media (max-width: 600px) {
     .building-table, .building-table thead, .building-table tbody, .building-table th, .building-table td, .building-table tr {
         display: inline-block;

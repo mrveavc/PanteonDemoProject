@@ -1,7 +1,7 @@
 import { useState } from 'react';
-import axios from 'axios';
 import '../assets/css/custom.css'; 
 import { useNavigate } from "react-router-dom";
+import axiosInstance from '../../axiosConfig';
 
 const RegisterPage = () => {
     const navigate = useNavigate();
@@ -21,7 +21,7 @@ const RegisterPage = () => {
 
         e.preventDefault();
         try {
-            await axios.post('https://localhost:7059/api/Auth/register', { username, email, password });
+           await axiosInstance.post('/auth/register', { username, email, password });
             setMessage('Register successful!');
             navigate("/");
         } catch (error) {
@@ -72,43 +72,7 @@ const RegisterPage = () => {
                 {message && <p className="error-message">{message}</p>}
             </div>
         </div>
-        //<div>
-        //    <h2>Register</h2>
-        //    <form onSubmit={this.handleFormSubmit}>
-        //        <div>
-        //            <label>Username</label>
-        //            <input
-        //                type="text"
-        //                name="username"
-        //                value={username}
-        //                onChange={this.handleInputChange}
-        //                required
-        //            />
-        //        </div>
-        //        <div>
-        //            <label>Email</label>
-        //            <input
-        //                type="email"
-        //                name="email"
-        //                value={email}
-        //                onChange={this.handleInputChange}
-        //                required
-        //            />
-        //        </div>
-        //        <div>
-        //            <label>Password</label>
-        //            <input
-        //                type="password"
-        //                name="password"
-        //                value={password}
-        //                onChange={this.handleInputChange}
-        //                required
-        //            />
-        //        </div>
-        //        <button type="submit">Register</button>
-        //    </form>
-        //    {message && <p>{message}</p>}
-        //</div>
+       
     );
 };
 

@@ -1,8 +1,8 @@
 
-import  { useState } from 'react';
-import axios from 'axios';
+import  { useEffect, useState } from 'react';
 import '../assets/css/custom.css'; 
 import { useNavigate } from "react-router-dom";
+import axiosInstance from '../../axiosConfig';
 
 
 
@@ -14,6 +14,13 @@ const LoginPage = () => {
     const [password, setPassword] = useState('');
     const [message, setMessage] = useState('');
 
+
+    useEffect(() => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            navigate("/configuration"); 
+        }
+    }, [navigate]);
     const handleInputChange = (e) => {
         const { name, value } = e.target;
         if (name === 'username') setUsername(value);
@@ -24,8 +31,10 @@ const LoginPage = () => {
        
         e.preventDefault();
         try {
-             await axios.post('https://localhost:7059/api/Auth/login', { username, password });
+            const response = await axiosInstance.post('/auth/login', { username, password });
+            localStorage.setItem('token', response.data.token);
             setMessage('Login successful!');
+
             navigate("/configuration");
         } catch (error) {
             setMessage(error.response?.data?.message || 'An error occurred');
@@ -69,38 +78,7 @@ const LoginPage = () => {
                 {message && <p className="error-message">{message}</p>}
             </div>
         </div>
-        //<div className="login-container">
-        //    <div className="login-form">
-        //        <img src="https://www.panteon.games/wp-content/themes/panteon/assets/img/logo.png" alt="" width="400" height="100"/>
-        //        <h2>Login</h2>
-        //        <form onSubmit={handleFormSubmit}>
-        //            <div className="form-group">
-        //                <label htmlFor="username">Username</label>
-        //                <input
-        //                    type="text"
-        //                    id="username"
-        //                    name="username"
-        //                    value={username}
-        //                    onChange={handleInputChange}
-        //                    required
-        //                />
-        //            </div>
-        //            <div className="form-group">
-        //                <label htmlFor="password">Password</label>
-        //                <input
-        //                    type="password"
-        //                    id="password"
-        //                    name="password"
-        //                    value={password}
-        //                    onChange={handleInputChange}
-        //                    required
-        //                />
-        //            </div>
-        //            <button type="submit">Login</button>
-        //        </form>
-        //        {message && <p className="error-message">{message}</p>}
-        //    </div>
-        //</div>
+        
     );
 };
 
