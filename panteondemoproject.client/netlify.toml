@@ -1,23 +1,8 @@
 [build]
-  base = "" 
-  publish = "build"
-  command = "npm run build" 
-
-[context.production.environment]
-  NODE_ENV = "production"
+  publish = "panteondemoproject.client/build" 
+  command = "npm run build --prefix panteondemoproject.client" 
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
-  force = true
-
-[[headers]]
-  for = "/*.js"
-  [headers.values]
-    Content-Type = "application/javascript" 
-
-[[headers]]
-  for = "/*.css"
-  [headers.values]
-    Content-Type = "text/css" 
