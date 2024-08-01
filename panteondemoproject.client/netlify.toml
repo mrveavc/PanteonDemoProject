@@ -1,8 +1,0 @@
-[build]
-  publish = "panteondemoproject.client/build" 
-  command = "npm run build --prefix panteondemoproject.client" 
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
