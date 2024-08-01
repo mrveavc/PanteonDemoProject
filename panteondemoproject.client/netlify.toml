@@ -1,0 +1,23 @@
+[build]
+  base = "" # Proje kök dizini, genellikle boþ býrakýlýr
+  publish = "build" # Daðýtým dosyalarýnýn bulunduðu dizin (React için genellikle 'build' veya 'dist')
+  command = "npm run build" # Build komutu
+
+[context.production.environment]
+  NODE_ENV = "production" # Ortam deðiþkenleri
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
+  force = true
+
+[[headers]]
+  for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript" # JavaScript dosyalarý için MIME türü
+
+[[headers]]
+  for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css" # CSS dosyalarý için MIME türü
