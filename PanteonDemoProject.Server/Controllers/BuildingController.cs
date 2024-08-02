@@ -11,6 +11,7 @@ namespace PanteonDemoProject.Server.Controllers
     [ApiController]
     [Route("api/[controller]")]
     [Authorize]
+    
     public class BuildingController : ControllerBase
     {
         private readonly IMongoCollection<Building> _buildings;

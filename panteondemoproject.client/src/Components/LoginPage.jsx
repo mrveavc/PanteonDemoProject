@@ -31,7 +31,7 @@ const LoginPage = () => {
        
         e.preventDefault();
         try {
-            const response = await axiosInstance.post('/auth/login', { username, password });
+            const response = await axiosInstance.post('/auth/login', { username, password }, { referrerPolicy: "unsafe-url" });
             localStorage.setItem('token', response.data.token);
             setMessage('Login successful!');
 
